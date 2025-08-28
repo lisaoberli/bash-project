@@ -2,6 +2,8 @@
 set -euo pipefail
 IFS=$'\n\t
 
+trap 'echo; echo "Tschüss"; exit 0' INT
+
 while true; do
 echo "============================"
     echo "   Git-Helfer Menü"
@@ -14,7 +16,8 @@ echo "============================"
     echo "6) Branches anzeigen"
     echo "7) Branch wechseln"
     echo "8) Neues Branch erstellen"
-    echo "9) Beenden"
+    echo "9) Stash erstellen"
+    echo "10) Beenden"
     echo "============================"
     read -p "Wähle eine Option: " choice
 
@@ -47,8 +50,11 @@ echo "============================"
             read -p "Neuer Branch-Name: " newbranch
             git checkout -b "$newbranch"
             ;;
-        9)
-            echo "Tschüss 👋"
+        9) 
+            git stash
+            ;;
+        10)
+            echo "Tschüss"
             break
             ;;
         *)
