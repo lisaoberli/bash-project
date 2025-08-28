@@ -84,7 +84,7 @@ while true; do
       ok "Stash erstellt."
       ;;
     10)
-      echo "Anand Adios
+      echo "Anand Adios"
       break
       ;;
     *)
