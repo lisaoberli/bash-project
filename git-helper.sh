@@ -44,7 +44,7 @@ while true; do
       ok "Alle Änderungen hinzugefügt."
       ;;
     3)
-      # --- Identity-Check direkt vor dem Commit ---
+      # --- Identity-Check before commit
       name="$(git config user.name || true)"
       email="$(git config user.email || true)"
       if [[ -z "$name" || -z "$email" ]]; then
