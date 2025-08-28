@@ -11,5 +11,5 @@ chmod +x git-helper.sh
 
 ## how to use
 ```bash
-./script.sh [options]
+./git-helper.sh [options]
 ```
